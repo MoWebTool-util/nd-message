@@ -20,6 +20,7 @@
   "spm": {
     "main": "index.js",
     "dependencies": {
+      "handlebars-runtime": "3.0.1",
       "nd-template": "1.0.0",
       "nd-widget": "1.0.0"
     },
