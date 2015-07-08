@@ -1,0 +1,30 @@
+{
+  "name": "nd-message",
+  "version": "1.0.0",
+  "description": "简单的消息框（warn/error/info/success/...）",
+  "keywords": [],
+  "homepage": "https://github.com/ndfront/nd-message",
+  "author": {
+    "name": "crossjs",
+    "email": "liwenfu@crossjs.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ndfront/nd-message.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ndfront/nd-message/issues"
+  },
+  "licenses": "MIT",
+  "devDependencies": {},
+  "spm": {
+    "main": "index.js",
+    "dependencies": {
+      "nd-template": "1.0.0",
+      "nd-widget": "1.0.0"
+    },
+    "devDependencies": {
+      "expect.js": "0.3.1"
+    }
+  }
+}
