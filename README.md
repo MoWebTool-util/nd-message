@@ -1,6 +1,8 @@
 # nd-message
 
-[![spm version](http://spm.crossjs.com/badge/nd-message)](http://spm.crossjs.com/package/nd-message)
+[![Travis](https://img.shields.io/travis/ndfront/nd-message.svg?style=flat-square)](https://github.com/ndfront/nd-message)
+[![Coveralls](https://img.shields.io/coveralls/ndfront/nd-message.svg?style=flat-square)](https://github.com/ndfront/nd-message)
+[![NPM version](https://img.shields.io/npm/v/nd-promise.svg?style=flat-square)](https://npmjs.org/package/nd-message)
 
 > 简单的消息框（warn/error/info/success/...）
 
