@@ -6,6 +6,16 @@
     <span class="iconfont iconfont-{{icon}}"></span>
   {{/if}}
   {{#if msg}}
-    <div class="msg">{{{msg}}}</div>
+    {{#with msg}}
+      {{#if brief}}
+        <div class="brief">
+          {{{brief}}}
+          {{#if detail}}
+            <a data-role="toggle" class="toggle" href="javascript:;">{{__ '详情'}}</a>
+            <pre data-role="detail" class="detail">{{detail}}</pre>
+          {{/if}}
+        </div>
+      {{/if}}
+    {{/with}}
   {{/if}}
 </div>

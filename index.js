@@ -18,7 +18,10 @@ var Message = Widget.extend({
   },
 
   events: {
-    'click [data-role="close"]': 'destroy'
+    'click [data-role="close"]': 'destroy',
+    'click [data-role="toggle"]': 'toggle',
+    'mouseenter': 'clearTimeout',
+    'mouseleave': 'setTimeout'
   },
 
   initAttrs: function(config) {
@@ -32,8 +35,24 @@ var Message = Widget.extend({
     }
 
     if (model.timeout !== -1) {
-      setTimeout(this.hide.bind(this), model.timeout);
-      delete model.timeout;
+      this.setTimeout(model.timeout);
+    }
+  },
+
+  clearTimeout: function() {
+    if (this.timeout) {
+      clearTimeout(this.timeout);
+      delete this.timeout;
+    }
+  },
+
+  setTimeout: function(timeout) {
+    if (!timeout){
+      timeout = this.get('model').timeout;
+    }
+
+    if (timeout) {
+      this.timeout = setTimeout(this.hide.bind(this), timeout);
     }
   },
 
@@ -42,6 +61,10 @@ var Message = Widget.extend({
       opacity: 0,
       height: 0
     }, 200, this.destroy.bind(this));
+  },
+
+  toggle: function() {
+    this.$('[data-role="detail"]').toggle();
   }
 });
 
